@@ -1,0 +1,3756 @@
+/*----------------------------------------*/
+/*  03. HERO CSS START
+/*----------------------------------------*/
+.hero {
+  &__area {
+  }
+  &__height {
+    min-height: 950px;
+    @include breakpoint(sm) {
+      min-height: 1100px;
+    }
+
+    @include breakpoint(md) {
+      min-height: 750px;
+    }
+    @include breakpoint(lg) {
+      min-height: 850px;
+    }
+    @include breakpoint(xs) {
+      min-height: 850px;
+    }
+    &-2 {
+      @include breakpoint(sm) {
+        min-height: 1350px;
+      }
+      @include breakpoint(xs) {
+        min-height: 850px;
+      }
+    }
+  }
+  &__title {
+    font-size: 60px;
+    line-height: 1;
+    @include breakpoint(sm) {
+      font-size: 50px;
+    }
+    @include breakpoint(md) {
+      font-size: 35px;
+    }
+    @include breakpoint(lg) {
+      font-size: 45px;
+    }
+    @include breakpoint(xl) {
+      font-size: 55px;
+    }
+    @include breakpoint(xs) {
+      font-size: 30px;
+    }
+    & span {
+      &:first-child {
+        font-weight: 300;
+        display: block;
+      }
+      &.yellow-shape {
+        position: relative;
+        z-index: 1;
+        & img {
+          position: absolute;
+          bottom: 22px;
+          left: -8px;
+          z-index: -1;
+          -webkit-animation: section-animation 3s infinite;
+          animation: section-animation 3s infinite;
+          @include breakpoint(md) {
+            bottom: 12px;
+            height: 40% !important;
+          }
+        }
+      }
+    }
+    &-2 {
+      margin-bottom: 20px;
+    }
+  }
+  &__content {
+    & p {
+      font-size: 22px;
+      color: $black;
+      padding-right: 130px;
+      line-height: 30px;
+      margin-bottom: 28px;
+      @include breakpoint(sm) {
+        padding-right: 0px;
+      }
+      @include breakpoint(md) {
+        padding-right: 0px;
+      }
+      @include breakpoint(lg) {
+        padding-right: 30px;
+      }
+      @include breakpoint(xs) {
+        padding-right: 0px;
+      }
+    }
+    &-2 {
+      & h4 {
+        font-size: 22px;
+        margin-bottom: 0;
+      }
+      & p {
+        color: $e-text-4;
+        font-size: 16px;
+        margin-bottom: 37px;
+      }
+    }
+  }
+  &__thumb {
+    z-index: 1;
+    &-big {
+      position: relative;
+      & img {
+        max-width: 400px;
+        max-height: 460px;
+        @include border-radius(40px 4px 40px 4px);
+        @include box-shadow(0px 30px 60px 0px rgba(1, 11, 60, 0.14));
+        @include breakpoint(sm) {
+          margin-top: 50px;
+          width: 100%;
+        }
+        @include breakpoint(md) {
+          width: 100%;
+        }
+        @include breakpoint(xs) {
+          margin-top: 50px;
+          width: 100%;
+        }
+      }
+    }
+    &-sm {
+      @include breakpoint(lg) {
+        margin-left: -160px;
+        margin-top: -95px;
+      }
+      @include breakpoint(xl) {
+        margin-left: -50px;
+      }
+      & img {
+        max-width: 200px;
+        max-height: 240px;
+        @include border-radius(4px 40px 4px 40px);
+        @include box-shadow(0px 30px 60px 0px rgba(1, 11, 60, 0.14));
+      }
+    }
+    &-shape {
+      & img {
+        position: absolute;
+        z-index: -1;
+
+        &.hero-1-dot {
+          bottom: -25px;
+          left: -30px;
+          -webkit-animation: hero-dot-1 5s linear 0s infinite alternate;
+          -moz-animation: hero-dot-1 5s linear 0s infinite alternate;
+          -o-animation: hero-dot-1 5s linear 0s infinite alternate;
+          animation: hero-dot-1 5s linear 0s infinite alternate;
+        }
+        &.hero-1-circle-3 {
+          bottom: -47px;
+          right: 1%;
+        }
+        &.hero-1-circle-4 {
+          top: -50px;
+          right: 10%;
+        }
+      }
+    }
+    &-2 {
+      position: relative;
+      z-index: 1;
+      & img {
+        &.hero-big {
+          @include breakpoint(sm) {
+            width: 100%;
+          }
+          @include breakpoint(md) {
+            width: 100%;
+          }
+          @include breakpoint(lg) {
+            width: 100%;
+          }
+          @include breakpoint(xl) {
+            width: 100%;
+          }
+          @include breakpoint(xs) {
+            width: 100%;
+          }
+        }
+        &.hero-shape-purple {
+          position: absolute;
+          left: 0;
+          bottom: 19%;
+          z-index: -1;
+          @include breakpoint(sm) {
+            width: 100%;
+          }
+          @include breakpoint(md) {
+            width: 100%;
+          }
+          @include breakpoint(lg) {
+            width: 100%;
+          }
+          @include breakpoint(xl) {
+            width: 100%;
+          }
+          @include breakpoint(xs) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  &__quote {
+    position: absolute;
+    bottom: 60px;
+    right: -200px;
+    padding: 15px 25px;
+    padding-bottom: 20px;
+    background: $white;
+    @include border-radius(4px);
+    @include box-shadow(0px 30px 60px 0px rgba(1, 11, 60, 0.14));
+
+    @include breakpoint(sm) {
+      right: 30px;
+      bottom: -50px;
+    }
+    @include breakpoint(md) {
+      right: 30px;
+      bottom: -50px;
+    }
+    @include breakpoint(lg) {
+      right: 60px;
+      bottom: -50px;
+    }
+    @include breakpoint(xl) {
+      right: -145px;
+    }
+    @include breakpoint(xs) {
+      right: 15px;
+      bottom: -50px;
+    }
+    & span {
+      font-size: 14px;
+      color: $e-text-2;
+    }
+    & h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 0;
+      line-height: 1;
+    }
+
+    &-animation {
+      animation-duration: 2.5s;
+      animation-fill-mode: both;
+      animation-iteration-count: infinite;
+      animation-name: hero-bounce;
+    }
+  }
+  &__shape {
+    & img {
+      position: absolute;
+      &.hero-1-circle {
+        top: 25%;
+        left: 5%;
+        -webkit-animation: hero-circle-1 6s linear 0s infinite alternate;
+        -moz-animation: hero-circle-1 6s linear 0s infinite alternate;
+        -o-animation: hero-circle-1 6s linear 0s infinite alternate;
+        animation: hero-circle-1 6s linear 0s infinite alternate;
+      }
+      &.hero-1-circle-2 {
+        bottom: 29%;
+        left: 0;
+      }
+      &.hero-1-dot-2 {
+        right: 0;
+        bottom: 38%;
+      }
+    }
+  }
+  &__search {
+    &-input {
+      position: relative;
+      width: 370px;
+      @include breakpoint(xs) {
+        width: 100%;
+      }
+      & input {
+        width: 100%;
+        height: 54px;
+        line-height: 54px;
+        padding: 0 24px;
+        padding-right: 35px;
+        font-size: 14px;
+        @include border-radius(4px);
+        outline: none;
+        border: none;
+
+        &::placeholder {
+          color: $e-text-7;
+        }
+      }
+      & button {
+        position: absolute;
+        top: 50%;
+        right: 24px;
+        @include transform(translateY(-50%));
+        font-size: 18px;
+        background: transparent;
+        & i {
+          &::after {
+            color: $black;
+            opacity: 1;
+          }
+          &::before {
+            color: $e-text-1;
+          }
+        }
+      }
+    }
+    & p {
+      font-size: 16px;
+      color: $e-text-3;
+    }
+  }
+  &__promotion {
+    position: absolute !important;
+    left: -7% !important;
+    top: 44% !important;
+    @include border-radius(4px);
+    @include box-shadow(0px 30px 60px 0px rgba(1, 11, 60, 0.14));
+    padding: 15px 20px;
+    padding-bottom: 10px;
+    @include breakpoint(sm) {
+      left: 9% !important;
+      top: 71% !important;
+    }
+    @include breakpoint(md) {
+      left: 20% !important;
+      top: 71% !important;
+    }
+    @include breakpoint(xs) {
+      left: 9% !important;
+      top: 52% !important;
+    }
+    &.education {
+      bottom: 28% !important;
+      top: auto !important;
+      left: -11% !important;
+    }
+    &-icon {
+      & span {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        text-align: center;
+        line-height: 36px;
+        @include border-radius(50%);
+        background: #ff7921;
+        & svg {
+          height: 24px;
+          fill: $white;
+        }
+        &.cap {
+          background: #5773ff;
+        }
+      }
+    }
+    &-text {
+      & h5 {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+      & p {
+        font-size: 14px;
+        color: $e-text-2;
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__class {
+    position: absolute;
+    left: auto !important;
+    top: auto !important;
+    bottom: 33%;
+    right: -12%;
+    @include box-shadow(0px 30px 60px 0px rgba(1, 11, 60, 0.14));
+    background: rgba($color: $white, $alpha: 0.9);
+    @include border-radius(4px);
+    padding: 20px;
+    @include breakpoint(lg) {
+      right: 1%;
+      bottom: 15%;
+    }
+    @include breakpoint(xl) {
+      right: -5%;
+    }
+    &-thumb {
+      & img {
+        width: 34px;
+        height: 34px;
+        @include border-radius(50%);
+      }
+    }
+    &-text {
+      & h5 {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+      & p {
+        font-size: 14px;
+        color: $e-text-2;
+        margin-bottom: 0;
+      }
+      & a {
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: $white;
+        font-weight: 500;
+        padding: 0 15px;
+        @include border-radius(4px);
+        background: #e233fb;
+      }
+    }
+  }
+  &__mic {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-name: hero-bounce;
+    & span {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background: #ff3c4e;
+      @include box-shadow(0px 14px 30px 0px rgba(131, 2, 14, 0.2));
+      @include border-radius(6px);
+      & svg {
+        height: 28px;
+        fill: $white;
+      }
+    }
+  }
+}
+
+@keyframes hero-dot-1 {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes hero-bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes hero-circle-1 {
+  0% {
+    @include transform(rotate(0deg));
+  }
+  100% {
+    @include transform(rotate(360deg));
+  }
+}
+
+/*----------------------------------------*/
+/*  04. CATEGORY CSS START
+/*----------------------------------------*/
+.category {
+  &__item {
+    padding: 20px 40px;
+    @include border-radius(6px);
+    border: 2px solid $border;
+    @include breakpoint(sm) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @include breakpoint(lg) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @include breakpoint(xs) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    &:hover {
+      background: $e-blue;
+      border-color: $e-blue;
+      @include box-shadow(0px 20px 30px 0px rgba(4, 23, 118, 0.3));
+      & .category__title {
+        color: $white;
+      }
+      & svg {
+        & .st0,
+        & .st1,
+        & .st2,
+        & .st4,
+        & .st5 {
+          fill: $white;
+        }
+      }
+      & .category__content {
+        & p {
+          color: $white;
+        }
+      }
+    }
+  }
+  &__icon {
+    @include breakpoint(sm) {
+      margin-right: 15px;
+    }
+    & svg {
+      width: 40px;
+      height: 40px;
+      & .st0 {
+        fill: #cee1f2;
+      }
+      & .st1 {
+        fill: #3444f1;
+      }
+      & .st4 {
+        fill: #3444f1;
+      }
+      & .st2 {
+        fill: #ffb31f;
+      }
+      & .st5 {
+        fill: #ffb31f;
+      }
+    }
+  }
+  &__title {
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+  &__content {
+    & p {
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*----------------------------------------*/
+/*  21. PAGE TITLE CSS START
+/*----------------------------------------*/
+.page {
+  &__title {
+    font-size: 70px;
+    color: $white;
+    line-height: 62px;
+    margin-bottom: 0;
+
+    @include breakpoint(xs) {
+      font-size: 50px;
+    }
+    &-2 {
+      font-size: 60px;
+      line-height: 1.17;
+      color: $white;
+      margin-bottom: 20px;
+      @include breakpoint(sm) {
+        font-size: 33px;
+      }
+      @include breakpoint(md) {
+        font-size: 45px;
+      }
+      @include breakpoint(lg) {
+        font-size: 50px;
+      }
+      @include breakpoint(xs) {
+        font-size: 35px;
+      }
+    }
+    &-3 {
+      font-size: 50px;
+      line-height: 1.1;
+      margin-top: 12px;
+      @include breakpoint(sm) {
+        font-size: 40px;
+      }
+      @include breakpoint(xs) {
+        font-size: 26px;
+      }
+    }
+    &-pre {
+      display: inline-block;
+      height: 24px;
+      line-height: 26px;
+      font-size: 14px;
+      color: $white;
+      font-weight: 500;
+      background: $e-green;
+      @include border-radius(4px);
+      padding: 0 7px;
+      margin-bottom: 12px;
+      &.purple-bg {
+        background: $e-purple;
+      }
+    }
+    &-wrapper {
+      position: relative;
+      z-index: 1;
+      & .breadcrumb {
+        margin-bottom: 0;
+        & .breadcrumb-item {
+          &.active {
+            font-size: 15px;
+            color: $white;
+            &::before {
+              content: ".";
+              font-family: $hind;
+              font-size: 30px;
+              color: $white;
+              line-height: 18px;
+              padding-right: 13px;
+            }
+          }
+          & a {
+            font-size: 15px;
+            font-weight: 400;
+            color: $white;
+          }
+          & + .breadcrumb-item {
+            padding-left: 13px;
+            &::before {
+              content: ".";
+              font-family: $hind;
+              font-size: 30px;
+              color: $white;
+              line-height: 18px;
+              padding-right: 13px;
+            }
+          }
+        }
+      }
+    }
+    &-height {
+      min-height: 450px;
+      @include background();
+      &-2 {
+        min-height: 700px;
+      }
+    }
+    &-overlay {
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #000320, $alpha: 0.6);
+      }
+    }
+    &-shape {
+      & img {
+        position: absolute;
+        z-index: 1;
+        &.page-title-shape-1 {
+          left: 0;
+          bottom: 105px;
+        }
+        &.page-title-shape-2 {
+          left: 105px;
+          top: 35%;
+          @include breakpoint(sm) {
+            left: 50px;
+            top: 28%;
+          }
+          @include breakpoint(md) {
+            top: 29%;
+          }
+          @include breakpoint(lg) {
+            top: 24%;
+          }
+          @include breakpoint(xl) {
+            top: 28%;
+          }
+          @include breakpoint(xxl) {
+            left: 40px;
+          }
+          @include breakpoint(xs) {
+            left: 30px;
+            top: 28%;
+          }
+        }
+        &.page-title-shape-3 {
+          bottom: 35%;
+          right: 0;
+        }
+        &.page-title-shape-4 {
+          bottom: 41%;
+          right: 0;
+        }
+        &.page-title-shape-5 {
+          top: 61%;
+          left: 0;
+          z-index: -1;
+        }
+        &.page-title-shape-6 {
+          top: 43%;
+          left: 5%;
+          z-index: -1;
+          @include breakpoint(sm) {
+            top: 20%;
+            left: 3%;
+          }
+          @include breakpoint(md) {
+            top: 20%;
+            left: 3%;
+          }
+          @include breakpoint(lg) {
+            top: 20%;
+            left: 3%;
+          }
+          @include breakpoint(xl) {
+            top: 20%;
+            left: 3%;
+          }
+          @include breakpoint(xs) {
+            top: 20%;
+            left: 3%;
+          }
+        }
+        &.page-title-shape-7 {
+          top: 27%;
+          right: 0;
+          z-index: -1;
+        }
+        &.page-title-shape-8 {
+          top: 38%;
+          right: 25%;
+          z-index: -1;
+        }
+      }
+    }
+    &-breadcrumb {
+      & .breadcrumb {
+        margin-bottom: 30px;
+        & .breadcrumb-item {
+          font-size: 14px;
+          font-weight: 400;
+          color: $e-text-4;
+          &.active {
+            &::before {
+              content: ".";
+              font-family: $hind;
+              font-size: 30px;
+              color: $e-text-4;
+              line-height: 18px;
+              padding-right: 13px;
+            }
+          }
+          & + .breadcrumb-item {
+            &::before {
+              content: ".";
+              font-family: $hind;
+              font-size: 30px;
+              color: $e-text-4;
+              line-height: 18px;
+              padding-right: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*----------------------------------------*/
+/*  06. COURSE CSS START
+/*----------------------------------------*/
+.course {
+  &__item {
+    @include border-radius(6px);
+    @include box-shadow(0px 30px 40px 0px rgba(1, 11, 60, 0.06));
+    &-3 {
+      @include box-shadow(none);
+      & .course__more {
+        border: 1px solid $border;
+      }
+      & .course__content {
+        border: 1px solid $border;
+        border-top: none;
+        border-bottom: none;
+      }
+    }
+    &:hover {
+      & .course__thumb {
+        & img {
+          @include transform(scale(1.1));
+        }
+      }
+    }
+    &-2 {
+      padding: 40px;
+      @include breakpoint(md) {
+        padding: 20px;
+      }
+      @include breakpoint(xs) {
+        padding: 20px;
+      }
+    }
+  }
+  &__thumb {
+    &-list {
+      @include breakpoint(lg) {
+        height: 100%;
+      }
+      & img {
+        @include breakpoint(lg) {
+          height: 100%;
+        }
+      }
+    }
+  }
+  &__tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    & a {
+      display: inline-block;
+      height: 24px;
+      line-height: 24px;
+      font-size: 14px;
+      font-weight: 500;
+      color: $white;
+      background: $e-purple;
+      padding: 0 10px;
+      @include border-radius(4px);
+
+      &.sky-blue {
+        background: $e-skyblue;
+      }
+      &.green {
+        background: $e-green;
+      }
+      &.blue {
+        background: $e-blue-2;
+      }
+      &.blue-2 {
+        background: $e-blue-6;
+      }
+      &.orange {
+        background: $e-orange-2;
+      }
+      &.pink {
+        background: $e-pink-2;
+      }
+      &.yellow {
+        background: $e-yellow-3;
+      }
+    }
+    &-2 {
+      & i {
+        color: $e-blue;
+        padding-right: 8px;
+      }
+      & a {
+        font-size: 16px;
+        color: $e-text-4;
+        font-weight: 500;
+        &:hover {
+          color: $e-blue;
+        }
+      }
+    }
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    @include breakpoint(lg) {
+      font-size: 18px;
+    }
+    @include breakpoint(xl) {
+      font-size: 20px;
+    }
+    & a {
+      &:hover {
+        color: $e-blue;
+      }
+    }
+    &-2 {
+      font-size: 24px;
+      margin-bottom: 2px;
+      & a {
+        &:hover {
+          color: $e-blue;
+        }
+      }
+    }
+    &-3 {
+      font-size: 36px;
+      @include breakpoint(sm) {
+        font-size: 30px;
+      }
+      @include breakpoint(xs) {
+        font-size: 20px;
+      }
+    }
+  }
+  &__meta {
+    margin-bottom: 7px;
+  }
+  &__lesson {
+    & span {
+      font-size: 16px;
+      & i {
+        color: $e-text-4;
+        padding-right: 7px;
+      }
+    }
+  }
+  &__content {
+    padding: 25px 30px;
+    &-2 {
+      padding-top: 25px;
+      & p {
+        margin-bottom: 30px;
+      }
+    }
+    &-3 {
+      padding-left: 80px;
+      padding-right: 70px;
+      @include breakpoint(lg) {
+        padding-top: 15px;
+        padding-bottom: 80px;
+      }
+      @include breakpoint(md) {
+        padding-left: 45px;
+        padding-bottom: 85px;
+      }
+      @include breakpoint(sm) {
+        padding-left: 45px;
+        padding-bottom: 85px;
+      }
+      @include breakpoint(xs) {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 85px;
+      }
+    }
+    &-4 {
+      padding-left: 50px;
+      padding-right: 50px;
+      @include breakpoint(sm) {
+        padding-left: 45px;
+        padding-bottom: 85px;
+      }
+      @include breakpoint(md) {
+        padding-left: 45px;
+        padding-bottom: 85px;
+      }
+      @include breakpoint(lg) {
+        padding-bottom: 70px;
+      }
+      @include breakpoint(xs) {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 85px;
+      }
+    }
+  }
+  &__summary {
+    & p {
+      font-size: 18px;
+      @include breakpoint(xs) {
+        font-size: 16px;
+      }
+    }
+  }
+  &__right {
+    position: relative;
+    height: 100%;
+  }
+  &__rating {
+    & span {
+      font-size: 16px;
+      & i {
+        padding-right: 5px;
+        color: $e-yellow-2;
+      }
+    }
+    &-2 {
+      & h5 {
+        font-size: 14px;
+        color: $e-text-4;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+      & ul {
+        & li {
+          display: inline-block;
+          & a {
+            font-size: 14px;
+            color: $e-yellow-2;
+          }
+        }
+      }
+    }
+    &-inner {
+      & p {
+        font-size: 16px;
+        color: $black;
+        font-weight: 600;
+        margin-bottom: 0;
+        padding-left: 3px;
+      }
+    }
+  }
+  &__teacher {
+    &-thumb {
+      & img {
+        width: 35px;
+        height: 35px;
+        border: 2px solid $white;
+        @include border-radius(50%);
+        @include box-shadow(0px 10px 14px 0px rgba(1, 11, 60, 0.1));
+      }
+      &-2 {
+        position: relative;
+        & img {
+          width: 46px;
+          height: 46px;
+          @include border-radius(50%);
+          @include box-shadow(0px 10px 20px 0px rgba(0, 5, 52, 0.1));
+        }
+      }
+      &-3 {
+        & img {
+          width: 44px;
+          height: 44px;
+          @include border-radius(50%);
+          border: 2px solid $white;
+          @include box-shadow(0px 10px 14px 0px rgba(1, 11, 60, 0.1));
+        }
+      }
+    }
+    & h6 {
+      font-size: 16px;
+      font-weight: 500;
+      color: $e-text-4;
+      margin-bottom: 0;
+      line-height: 1;
+      padding-top: 2px;
+      & a {
+        &:hover {
+          color: $e-blue;
+        }
+      }
+    }
+    &-info {
+      & h6 {
+        font-size: 18px;
+        line-height: 1;
+        margin-bottom: 0;
+        & a {
+          line-height: 1;
+        }
+      }
+      & span {
+        color: $e-text-3;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      &-3 {
+        & h5 {
+          font-size: 14px;
+          color: $e-text-4;
+          font-weight: 600;
+          margin-bottom: 0;
+        }
+        & p {
+          font-size: 16px;
+          color: $black;
+          font-weight: 600;
+          margin-bottom: 0;
+        }
+      }
+    }
+    &-rating {
+      position: absolute;
+      top: -1px;
+      right: -7px;
+      & i {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        text-align: center;
+        font-size: 10px;
+        color: $white;
+        background: $e-yellow-2;
+        @include border-radius(50%);
+      }
+    }
+  }
+  &__update {
+    & h5 {
+      font-size: 14px;
+      color: $e-text-4;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    & p {
+      font-size: 16px;
+      color: $black;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+  }
+  &__status {
+    & span {
+      font-size: 20px;
+      color: $e-purple;
+      font-weight: 600;
+      padding-right: 5px;
+      &.sky-blue {
+        color: $e-skyblue;
+      }
+      &.green {
+        color: $e-green;
+      }
+      &.blue {
+        color: $e-blue-2;
+      }
+      &.blue-2 {
+        color: $e-blue-6;
+      }
+      &.orange {
+        color: $e-orange-2;
+      }
+      &.pink {
+        color: $e-pink-2;
+      }
+      &.yellow {
+        color: $e-yellow-3;
+      }
+      &.old-price {
+        font-size: 14px;
+        color: $body-text-color;
+        text-decoration: line-through;
+      }
+    }
+  }
+  &__more {
+    padding: 10px 30px;
+    padding-top: 15px;
+    border-top: 1px solid $border-2;
+    &-2 {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      padding-left: 80px;
+      padding-right: 70px;
+      background: $white;
+      @include breakpoint(xs) {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    }
+    &-3 {
+      padding-left: 50px;
+      padding-right: 50px;
+      @include breakpoint(xs) {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    }
+  }
+  &__btn {
+    & .link-btn {
+      color: $black;
+      &:hover {
+        color: $e-blue;
+      }
+    }
+  }
+  &__menu {
+    & button {
+      font-size: 16px;
+      font-weight: 500;
+      color: $black;
+      background: transparent;
+      text-transform: capitalize;
+      position: relative;
+
+      & .tag {
+        position: absolute;
+        top: -25px;
+        right: -4px;
+        display: inline-block;
+        height: 20px;
+        line-height: 20px;
+        padding: 0 7px;
+        background: $e-blue;
+        color: $white;
+        @include border-radius(4px);
+        font-size: 12px;
+        text-transform: capitalize;
+        @include box-shadow(0px 8px 20px 0px rgba(1, 23, 133, 0.3));
+
+        &::after {
+          position: absolute;
+          content: "";
+          bottom: -5px;
+          left: 10px;
+          width: 0;
+          height: 0;
+          border-left: 5px solid $e-blue;
+          border-top: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+        }
+      }
+      &:hover,
+      &.active {
+        color: $e-blue;
+      }
+      &:not(:first-child) {
+        margin-left: 25px;
+        @include breakpoint(xs) {
+          margin-left: 0;
+        }
+      }
+
+      @include breakpoint(xs) {
+        margin-right: 25px;
+      }
+    }
+  }
+  &__tab {
+    &-inner {
+      padding: 15px 20px;
+      @include border-radius(4px);
+    }
+    &-btn {
+      & .nav-tabs {
+        border: none;
+        & .nav-item {
+          & .nav-link {
+            @include border-radius(4px);
+            border: none;
+            width: 30px;
+            height: 30px;
+            background: transparent;
+            padding: 0;
+            margin-right: 6px;
+            & svg {
+              width: 14px;
+              height: 14px !important;
+
+              &.grid {
+                & .st0 {
+                  fill: none;
+                  stroke: $e-text-4;
+                  stroke-width: 1.5;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                }
+              }
+            }
+            &.active {
+              background: $e-blue;
+              & svg {
+                &.grid {
+                  & .st0 {
+                    fill: none;
+                    stroke: $white;
+                  }
+                }
+                & .st0 {
+                  fill: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &-2 {
+      & .nav-tabs {
+        border: none;
+        @include border-radius(4px);
+        overflow: hidden;
+        & .nav-item {
+          width: 25%;
+
+          &:not(:last-child) {
+            & .nav-link {
+              border-right: 1px solid $border-7;
+              &.active {
+                border-color: $e-blue;
+              }
+            }
+          }
+          & .nav-link {
+            background: $grey-2;
+            font-size: 16px;
+            font-weight: 600;
+            color: $black;
+            width: 100%;
+            height: 54px;
+            line-height: 54px;
+            padding: 0;
+            text-align: center;
+            @include border-radius(0);
+            & i {
+              padding-right: 5px;
+            }
+            &.active {
+              background: $e-blue;
+              color: $white;
+            }
+            & span {
+              @include breakpoint(xs) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__view {
+    margin-left: 12px;
+    & h4 {
+      font-size: 15px;
+      font-weight: 500;
+      color: $e-text-4;
+      display: inline-block;
+      margin-bottom: 0;
+    }
+  }
+  &__sort {
+    @include breakpoint(xs) {
+      margin-top: 15px;
+    }
+    &-inner {
+      position: relative;
+      &::before {
+        content: "\f107";
+        right: 15px;
+        top: 4px;
+        position: absolute;
+        color: $e-text-4;
+        font-family: $fontawesome;
+        font-weight: 500;
+      }
+      & select {
+        appearance: none;
+        -moz-appearance: none;
+        border: none;
+        outline: none;
+        width: 160px;
+        height: 35px;
+        line-height: 37px;
+        padding: 0 20px;
+        font-size: 15px;
+        color: $e-text-4;
+        font-weight: 500;
+        text-transform: capitalize;
+        @include border-radius(4px);
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__description {
+    & h3 {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+    & p {
+      font-size: 18px;
+      color: $e-text-4;
+    }
+    &-list {
+      & h4 {
+        font-size: 26px;
+        margin-bottom: 15px;
+      }
+      & ul {
+        & li {
+          font-size: 18px;
+          color: $e-text-4;
+          margin-bottom: 7px;
+          & i {
+            font-size: 16px;
+            color: $black;
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  &__sidebar {
+    @include breakpoint(lg) {
+      padding-left: 0;
+    }
+    @include breakpoint(md) {
+      padding-left: 0;
+      margin-top: 50px;
+    }
+    @include breakpoint(sm) {
+      margin-top: 50px;
+      padding-left: 0;
+    }
+    @include breakpoint(xs) {
+      margin-top: 50px;
+      padding-left: 0;
+    }
+    &-widget {
+      @include border-radius(4px);
+      padding: 27px 30px;
+      padding-bottom: 24px;
+      margin-bottom: 3px;
+      &-2 {
+        padding: 30px;
+        @include box-shadow(0px 30px 50px 0px rgba(1, 11, 60, 0.1));
+        @include border-radius(4px);
+      }
+    }
+    &-title {
+      font-size: 20px;
+      margin-bottom: 27px;
+      text-transform: capitalize;
+    }
+    &-search {
+      position: relative;
+      & input {
+        width: 100%;
+        height: 60px;
+        line-height: 58px;
+        padding: 0 30px;
+        padding-right: 45px;
+        background: $grey;
+        @include border-radius(4px);
+        border: 2px solid $grey;
+        outline: none;
+        &::placeholder {
+          color: $e-text-7;
+          font-weight: 500;
+        }
+        &:focus {
+          border-color: $e-blue;
+          background: $white;
+        }
+      }
+      & button {
+        width: 18px;
+        height: 18px;
+        background: transparent;
+        position: absolute;
+        top: 17px;
+        right: 20px;
+        & svg {
+          & .st0 {
+            fill: $e-text-1;
+          }
+          & .st1 {
+            fill: $black;
+          }
+        }
+      }
+    }
+    &-check {
+      & input {
+        margin: 0;
+        appearance: none;
+        -moz-appearance: none;
+        display: block;
+        width: 18px;
+        height: 18px;
+        background: $white;
+        border: 1px solid #c7c9d2;
+        @include border-radius(4px);
+        outline: none;
+        &:checked {
+          position: relative;
+          background-color: $e-blue;
+          border-color: transparent;
+          &::after {
+            box-sizing: border-box;
+            content: "\f00c";
+            position: absolute;
+            font-family: $fontawesome;
+            font-size: 11px;
+            color: $white;
+            top: 46%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+          }
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      & label {
+        font-size: 15px;
+        font-weight: 500;
+        color: $e-text-4;
+        padding-left: 14px;
+        &:hover {
+          cursor: pointer;
+          color: $e-blue;
+        }
+      }
+    }
+    &-course {
+    }
+  }
+  &__sm {
+    &-thumb {
+      & img {
+        width: 60px;
+        height: 60px;
+        @include border-radius(6px);
+      }
+    }
+    &-content {
+      & h5 {
+        font-size: 16px;
+        margin-bottom: 0;
+        font-weight: 600;
+        line-height: 1;
+        & a {
+          &:hover {
+            color: $e-blue;
+          }
+        }
+      }
+    }
+    &-price {
+      & span {
+        font-size: 14px;
+        color: $e-blue;
+        font-weight: 600;
+      }
+    }
+    &-rating {
+      & ul {
+        & li {
+          display: inline-block;
+          & a {
+            font-size: 10px;
+            color: $e-yellow-2;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+  &__instructor {
+    & h3 {
+      font-size: 26px;
+    }
+    &-item {
+      @include breakpoint(sm) {
+        margin-top: 25px;
+        margin-right: 0px;
+      }
+      @include breakpoint(lg) {
+        margin-right: 40px;
+      }
+      @include breakpoint(xs) {
+        margin-top: 25px;
+        margin-right: 0px;
+      }
+    }
+    &-thumb {
+      & img {
+        width: 50px;
+        height: 50px;
+        @include border-radius(50%);
+      }
+    }
+    &-content {
+      & h3 {
+        font-size: 16px;
+        margin-bottom: 0;
+        line-height: 1;
+      }
+      & p {
+        font-size: 14px;
+        color: $e-text-4;
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__share {
+    & h3 {
+      font-size: 20px;
+    }
+    & ul {
+      & li {
+        display: inline-block;
+        margin-right: 10px;
+        & a {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          line-height: 44px;
+          text-align: center;
+          font-size: 13px;
+          color: $black;
+          background: $grey;
+          @include border-radius(4px);
+
+          &.fb {
+            color: #285da1;
+            background: rgba($color: #285da1, $alpha: 0.1);
+            &:hover {
+              color: $white;
+              background: #285da1;
+            }
+          }
+          &.tw {
+            color: #03a9f4;
+            background: rgba($color: #03a9f4, $alpha: 0.1);
+            &:hover {
+              color: $white;
+              background: #03a9f4;
+            }
+          }
+          &.pin {
+            color: #d8163f;
+            background: rgba($color: #d8163f, $alpha: 0.1);
+            &:hover {
+              color: $white;
+              background: #d8163f;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__curriculum {
+    &-content {
+      padding: 13px 30px;
+      border-bottom: 1px solid $border-8;
+      @include transition(0.3s);
+      &:hover {
+        background: $grey-7;
+      }
+    }
+    &-info {
+      & svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 7px;
+        & .st0 {
+          fill: none;
+          stroke: #6d6e75;
+          stroke-width: 2;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+      }
+      & h3 {
+        display: inline-block;
+        font-size: 16px;
+        color: $e-text-4;
+        font-weight: 400;
+        margin-bottom: 0;
+        & span {
+          color: $black;
+          font-weight: 500;
+        }
+      }
+    }
+    &-meta {
+      & span {
+        &.time {
+          font-size: 16px;
+          color: $e-text-4;
+          & i {
+            margin-right: 7px;
+          }
+        }
+        &.question {
+          display: inline-block;
+          height: 24px;
+          line-height: 24px;
+          color: $white;
+          padding: 0 11px;
+          @include border-radius(4px);
+          background: $e-pink-2;
+          margin-left: 20px;
+        }
+      }
+    }
+    & .accordion-item {
+      padding: 0;
+
+      & .accordion-button {
+        outline: none;
+        border: 1px solid $border-8;
+        @include border-radius(4px 4px 0 0);
+        background: $grey;
+        font-size: 20px;
+        font-weight: 700;
+        color: $black;
+        padding-top: 18px;
+        padding-left: 30px;
+        padding-right: 30px;
+        &.collapsed {
+          @include border-radius(4px);
+        }
+        &:focus {
+          @include box-shadow(none);
+        }
+      }
+      & .accordion-body {
+        padding: 0;
+      }
+    }
+  }
+  &__review {
+    &-rating {
+      &-info {
+        padding: 62px 0;
+        border-right: 3px solid $white;
+        @include border-radius(4px 0 0 4px);
+        @include breakpoint(xs) {
+          border-right: 0;
+          border-bottom: 3px solid $white;
+          @include border-radius(4px 4px 0 0);
+        }
+        & h5 {
+          font-size: 100px;
+          line-height: 70px;
+          font-weight: 500;
+          margin-bottom: 8px;
+        }
+        & ul {
+          & li {
+            display: inline-block;
+            & a {
+              color: $e-yellow-2;
+            }
+          }
+        }
+        & p {
+          color: $e-text-4;
+          margin-bottom: 0;
+        }
+      }
+    }
+    &-progress {
+      width: calc(100% - 60px - 60px);
+      height: 4px;
+      overflow: hidden;
+      background: $grey-8;
+      @include border-radius(2px);
+
+      & .single-progress {
+        background: $e-blue;
+        height: 100%;
+      }
+    }
+    &-details {
+      padding: 35px 65px 10px 35px;
+      @include border-radius(0 4px 4px 0);
+      & > h5 {
+        font-size: 16px;
+        font-weight: 500;
+        color: $black;
+        margin-bottom: 20px;
+      }
+      @include breakpoint(xs) {
+        @include border-radius(0 0 4px 4px);
+      }
+    }
+    &-item {
+      margin-bottom: 5px;
+    }
+    &-text {
+      & span {
+        font-size: 16px;
+        color: $e-text-4;
+      }
+    }
+    &-percent {
+      width: 40px;
+      & h5 {
+        font-size: 16px;
+        font-weight: 400;
+        color: $e-text-4;
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__progress {
+  }
+  &__comment {
+    &-box {
+      background: $grey;
+      @include border-radius(4px);
+      padding: 25px 40px 25px 30px;
+      margin-bottom: 10px;
+      & p {
+        color: $e-text-4;
+        margin-bottom: 0;
+      }
+    }
+    &-thumb {
+      & img {
+        width: 50px;
+        height: 50px;
+        @include border-radius(50%);
+      }
+    }
+    &-info {
+      margin-bottom: 5px;
+      & h4 {
+        font-size: 16px;
+        line-height: 1;
+        margin-bottom: 0;
+      }
+      & span {
+        font-size: 14px;
+        color: $e-text-4;
+      }
+    }
+    &-rating {
+      & ul {
+        & li {
+          display: inline-block;
+          & a {
+            font-size: 12px;
+            color: $e-yellow-2;
+            &.no-rating {
+              color: #b8b9bf;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__form {
+    & h3 {
+      font-size: 26px;
+      margin-bottom: 40px;
+    }
+    &-input {
+      & input,
+      & textarea {
+        width: 100%;
+        height: 56px;
+        line-height: 54px;
+        border: 2px solid $grey;
+        outline: none;
+        background: $grey;
+        padding: 0 22px;
+        font-size: 15px;
+        @include border-radius(4px);
+        margin-bottom: 20px;
+        &:focus {
+          border-color: $e-blue;
+          background: $white;
+        }
+        &::placeholder {
+          color: $e-text-4;
+        }
+      }
+
+      & textarea {
+        height: 150px;
+        resize: none;
+        padding: 20px;
+        line-height: 1.1;
+      }
+    }
+    &-rating {
+      margin-bottom: 10px;
+      & span {
+        color: $e-text-4;
+      }
+      & ul {
+        display: inline-block;
+        & li {
+          display: inline-block;
+          & a {
+            font-size: 14px;
+            color: $e-yellow-2;
+            &.no-rating {
+              color: #b8b9bf;
+            }
+          }
+        }
+      }
+    }
+    &-btn {
+      & button {
+        text-transform: capitalize;
+      }
+    }
+  }
+  &__member {
+    &-item {
+      padding: 25px 30px;
+      background: $grey;
+      @include border-radius(4px);
+      margin-bottom: 10px;
+    }
+    &-thumb {
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: -5px;
+        width: 1px;
+        height: 80px;
+        background: #dddee4;
+        @include breakpoint(xs) {
+          display: none;
+        }
+      }
+      & img {
+        width: 70px;
+        height: 70px;
+        @include border-radius(50%);
+      }
+    }
+    &-name {
+      & h5 {
+        font-size: 16px;
+        line-height: 1;
+        margin-bottom: 0;
+      }
+      & span {
+        font-size: 15px;
+        color: $e-text-4;
+      }
+    }
+    &-content {
+    }
+    &-info {
+      @include breakpoint(sm) {
+        padding-left: 0;
+      }
+      @include breakpoint(xs) {
+        margin-top: 25px;
+        padding-left: 0;
+      }
+      & h5 {
+        font-size: 16px;
+        line-height: 1;
+        margin-bottom: 0;
+      }
+      & span {
+        font-size: 15px;
+        color: $e-text-4;
+      }
+    }
+  }
+  &__slider {
+    & .swiper-pagination {
+      bottom: 20px;
+      & .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background: #d6d7de;
+        @include border-radius(50%);
+        margin: 0 5px;
+        opacity: 1;
+        &.swiper-pagination-bullet-active {
+          background: $e-blue;
+        }
+      }
+    }
+  }
+  &__video {
+    &-thumb {
+      position: relative;
+      overflow: hidden;
+      @include border-radius(4px);
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #000320, $alpha: 0.5);
+      }
+    }
+    &-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, -50%));
+      z-index: 1;
+    }
+    &-meta {
+    }
+    &-price {
+      & h5 {
+        font-size: 26px;
+        display: inline-block;
+        margin-bottom: 0;
+        & span {
+          font-size: 20px;
+          font-weight: 600;
+        }
+        &.old-price {
+          text-decoration: line-through;
+          color: $e-text-3;
+          font-weight: 500;
+          font-size: 16px;
+          padding-left: 10px;
+        }
+      }
+    }
+    &-discount {
+      & span {
+        display: inline-block;
+        font-size: 14px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 12px;
+        color: $e-pink-5;
+        background: rgba($color: $e-pink-5, $alpha: 0.08);
+        font-weight: 600;
+        @include border-radius(4px);
+      }
+    }
+    &-content {
+      & ul {
+        & li {
+          &:not(:last-child) {
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #eef0f6;
+          }
+        }
+      }
+    }
+    &-icon {
+      & svg {
+        width: 16px;
+        height: 20px;
+        margin-right: 12px;
+        & .st0 {
+          fill: none;
+          stroke: $e-blue;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          stroke-miterlimit: 2.6667;
+        }
+      }
+    }
+    &-info {
+      & h5 {
+        margin-bottom: 0;
+        font-weight: 400;
+        color: $e-text-3;
+        font-size: 15px;
+        line-height: 1;
+        & span {
+          font-weight: 500;
+          color: $black;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+  &__payment {
+    & h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  }
+  &__enroll-btn {
+    & i {
+      padding-left: 4px;
+    }
+  }
+  &__shape {
+    & img {
+      position: absolute;
+      &.course-dot {
+        right: -30px;
+        top: 150px;
+        z-index: -1;
+        @include breakpoint(sm) {
+          right: -10px;
+        }
+        @include breakpoint(md) {
+          right: -20px;
+        }
+        @include breakpoint(lg) {
+          right: -20px;
+        }
+        @include breakpoint(xs) {
+          right: -10px;
+        }
+      }
+    }
+  }
+}
+
+/*----------------------------------------*/
+/*  07. EVENTS CSS START
+/*----------------------------------------*/
+.events {
+  &__shape {
+    & img {
+      &.events-1-shape {
+        position: absolute;
+        top: 60%;
+        left: 53%;
+        @include transform(translate(-50%, -50%));
+
+        @include breakpoint(sm) {
+          left: 50%;
+          width: 90%;
+        }
+        @include breakpoint(xl) {
+          top: 60%;
+          left: 53%;
+          width: auto;
+        }
+        @include breakpoint(xs) {
+          left: 50%;
+          width: 90%;
+        }
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    z-index: 1;
+    &-inner {
+      padding: 28px 50px;
+      @include border-radius(6px);
+      @include box-shadow(0px 30px 50px 0px rgba(1, 11, 60, 0.1));
+
+      @include breakpoint(sm) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      @include breakpoint(xs) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: auto;
+      bottom: 0;
+      left: -3px;
+      width: 10%;
+      height: 0%;
+      background: $e-blue;
+      @include border-radius(6px);
+      z-index: -1;
+    }
+    &:hover,
+    &.active {
+      &::after {
+        top: 0;
+        bottom: auto;
+        height: 100%;
+      }
+    }
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0;
+    & a {
+      &:hover {
+        color: $e-blue;
+      }
+    }
+  }
+  &__meta {
+    margin-bottom: 5px;
+    & span {
+      display: inline-block;
+      position: relative;
+      padding-right: 7px;
+      margin-right: 7px;
+      &:not(:last-child)::after {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 5px;
+        width: 1px;
+        height: 14px;
+        background: $body-text-color;
+      }
+    }
+  }
+  &__more {
+    @include breakpoint(xs) {
+      margin-top: 15px;
+    }
+    & .link-btn {
+      color: $black;
+      &:hover {
+        color: $e-blue;
+      }
+    }
+  }
+  &__details {
+    & h3 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    & p {
+      font-size: 18px;
+      line-height: 28px;
+      color: $e-text-4;
+    }
+  }
+  &__allow {
+    & h3 {
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    & ul {
+      & li {
+        font-size: 16px;
+        color: $black;
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+        & i {
+          display: inline-block;
+          width: 18px;
+          height: 18px;
+          text-align: center;
+          line-height: 18px;
+          font-size: 10px;
+          font-weight: 500;
+          color: $e-green;
+          background: rgba($color: $e-green, $alpha: 0.1);
+          @include border-radius(50%);
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  &__tag {
+    border-top: 1px solid #e4e6ef;
+    padding-top: 25px;
+    & span {
+      font-size: 16px;
+      color: $e-blue;
+      margin-right: 7px;
+    }
+    & a {
+      font-size: 16px;
+      color: $e-text-4;
+      font-weight: 600;
+      &:hover {
+        color: $e-blue;
+      }
+    }
+  }
+  &__info {
+    &-price {
+      & h5 {
+        font-size: 26px;
+        display: inline-block;
+        margin-bottom: 0;
+        & span {
+          font-size: 20px;
+          font-weight: 600;
+        }
+        &.old-price {
+          text-decoration: line-through;
+          color: $e-text-3;
+          font-weight: 500;
+          font-size: 16px;
+          padding-left: 10px;
+        }
+      }
+    }
+    &-discount {
+      & span {
+        display: inline-block;
+        font-size: 14px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 12px;
+        color: $e-pink-5;
+        background: rgba($color: $e-pink-5, $alpha: 0.08);
+        font-weight: 600;
+        @include border-radius(4px);
+      }
+    }
+    &-content {
+      & ul {
+        & li {
+          &:not(:last-child) {
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #eef0f6;
+          }
+        }
+      }
+    }
+    &-icon {
+      & svg {
+        width: 16px;
+        height: 20px;
+        margin-right: 12px;
+        & .st0 {
+          fill: none;
+          stroke: $e-blue;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          stroke-miterlimit: 2.6667;
+        }
+      }
+    }
+    &-item {
+      & h5 {
+        margin-bottom: 0;
+        font-weight: 400;
+        color: $e-text-3;
+        font-size: 15px;
+        line-height: 1;
+        & span {
+          font-weight: 500;
+          color: $black;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+  &__sidebar {
+    @include breakpoint(sm) {
+      padding-left: 0;
+      margin-top: 50px;
+    }
+    @include breakpoint(md) {
+      padding-left: 0;
+      margin-top: 50px;
+    }
+    @include breakpoint(xs) {
+      padding-left: 0;
+      margin-top: 50px;
+    }
+    &-widget {
+      position: relative;
+      padding: 30px;
+      @include box-shadow(0px 30px 50px 0px rgba(1, 11, 60, 0.1));
+      @include border-radius(4px);
+    }
+    &-shape {
+      & img {
+        position: absolute;
+        z-index: -1;
+        &.events-sidebar-img-2 {
+          top: 40px;
+          left: -25px;
+        }
+        &.events-sidebar-img-3 {
+          bottom: 90px;
+          right: -30px;
+          @include breakpoint(lg) {
+            right: -15px;
+          }
+          @include breakpoint(xs) {
+            right: -10px;
+          }
+        }
+      }
+    }
+  }
+  &__join-btn {
+    & a {
+      background: $e-pink-5;
+      & i {
+        padding-left: 5px;
+      }
+    }
+  }
+  &__social {
+    & h4 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 0px;
+      margin-right: 10px;
+    }
+    & ul {
+      & li {
+        display: inline-block;
+        margin-left: 5px;
+        & a {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          line-height: 44px;
+          text-align: center;
+          font-size: 13px;
+          color: $black;
+          background: $grey;
+          @include border-radius(4px);
+
+          &.fb {
+            color: #285da1;
+            background: rgba($color: #285da1, $alpha: 0.1);
+            &:hover {
+              color: $white;
+              background: #285da1;
+            }
+          }
+          &.tw {
+            color: #03a9f4;
+            background: rgba($color: #03a9f4, $alpha: 0.1);
+            &:hover {
+              color: $white;
+              background: #03a9f4;
+            }
+          }
+          &.pin {
+            color: #d8163f;
+            background: rgba($color: #d8163f, $alpha: 0.1);
+            &:hover {
+              color: $white;
+              background: #d8163f;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__sponsor {
+    &-title {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    &-info {
+      & h3 {
+        font-size: 16px;
+      }
+      & > h4 {
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        & span {
+          font-weight: 400;
+          color: $e-text-3;
+        }
+      }
+    }
+  }
+}
+
+/*----------------------------------------*/
+/*  08. PRICE CSS START
+/*----------------------------------------*/
+.price {
+  &__item {
+    padding: 45px 50px;
+    padding-bottom: 60px;
+    @include border-radius(6px);
+  }
+  &__head {
+    & h3 {
+      font-size: 26px;
+      margin-bottom: 5px;
+    }
+    & p {
+      color: $e-text-4;
+      margin-bottom: 17px;
+    }
+  }
+  &__tag {
+    padding-bottom: 13px;
+    border-bottom: 1px solid $border-3;
+    & h4 {
+      font-size: 50px;
+      margin-bottom: 0;
+      & span {
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+  &__offer {
+    position: absolute;
+    top: 20px;
+    right: -15px;
+    z-index: 1;
+
+    @include breakpoint(xs) {
+      right: 0;
+    }
+    & span {
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      font-size: 14px;
+      text-align: center;
+      color: $white;
+      background: $e-pink-2;
+      padding: 0 10px;
+      @include border-radius(4px 4px 0px 4px);
+      position: relative;
+      @include breakpoint(xs) {
+        @include border-radius(4px);
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: -10px;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-left: 15px solid $e-brown;
+        border-top: 0px solid transparent;
+        border-bottom: 10px solid transparent;
+        @include breakpoint(xs) {
+          display: none;
+        }
+      }
+    }
+  }
+  &__features {
+    & ul {
+      & li {
+        font-size: 16px;
+        font-weight: 500;
+        color: $black;
+        position: relative;
+        padding-left: 30px;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+        & i {
+          position: absolute;
+          left: 0;
+          top: 3px;
+          display: inline-block;
+          color: $e-green;
+          font-size: 8px;
+          height: 18px;
+          width: 18px;
+          line-height: 18px;
+          text-align: center;
+          @include border-radius(50%);
+          background: rgba($color: $e-green, $alpha: 0.1);
+        }
+
+        &:hover {
+          color: $e-green;
+          & i {
+            background: $e-green;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  &__tab-btn {
+    & .nav-tabs {
+      border: none;
+      & .nav-link {
+        background: transparent;
+        padding: 0 15px;
+        font-size: 14px;
+        color: $black-2;
+        font-weight: 500;
+        height: 36px;
+        line-height: 34px;
+        border: 2px solid $grey-2;
+        @include border-radius(4px);
+        text-transform: capitalize;
+        &:first-child {
+          border-right: 0;
+          @include border-radius(4px 0 0 4px);
+        }
+        &:last-child {
+          border-left: 0;
+          @include border-radius(0px 4px 4px 0px);
+        }
+        &.active {
+          background: $e-blue;
+          color: $white;
+          border-color: $e-blue;
+        }
+      }
+    }
+  }
+}
+
+/*----------------------------------------*/
+/*  09. CTA CSS START
+/*----------------------------------------*/
+.cta {
+  &__inner {
+    padding: 50px 100px 53px 70px;
+    @include border-radius(10px);
+    @include box-shadow(0px 30px 60px 0px rgba(0, 4, 48, 0.3));
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(sm) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include breakpoint(md) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include breakpoint(xs) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    &-2 {
+      @include breakpoint(lg) {
+        padding-right: 50px;
+        padding-left: 50px;
+      }
+    }
+    &-3 {
+      padding-left: 100px;
+      padding-right: 100px;
+      @include border-radius(6px);
+      @include breakpoint(sm) {
+        padding-left: 80px;
+        padding-right: 80px;
+      }
+      @include breakpoint(xs) {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    }
+  }
+  &__shape {
+    & img {
+      position: absolute;
+      bottom: -48px;
+      right: -148px;
+      @include breakpoint(sm) {
+        right: -80%;
+      }
+      @include breakpoint(md) {
+        right: -148px;
+      }
+      @include breakpoint(xs) {
+        right: -170%;
+      }
+    }
+    &-3 {
+      & img {
+        position: absolute;
+        &.cta-2 {
+          left: -117px;
+          top: -77px;
+        }
+        &.cta-3 {
+          right: -16px;
+          top: 100px;
+        }
+      }
+    }
+  }
+  &__title {
+    position: relative;
+    z-index: 1;
+    font-size: 46px;
+    color: $white;
+    margin-bottom: 0;
+
+    @include breakpoint(sm) {
+      font-size: 35px;
+    }
+    @include breakpoint(md) {
+      font-size: 31px;
+    }
+    @include breakpoint(lg) {
+      font-size: 40px;
+    }
+    @include breakpoint(xl) {
+      font-size: 45px;
+    }
+    @include breakpoint(xs) {
+      font-size: 25px;
+    }
+    &-2 {
+      font-size: 40px;
+      margin-bottom: 33px;
+    }
+  }
+  &__content {
+    & span {
+      font-size: 16px;
+      color: $white;
+      font-weight: 500;
+      display: inline-block;
+      padding: 0 10px;
+      height: 22px;
+      line-height: 22px;
+      @include border-radius(4px);
+      background: $e-pink-2;
+      margin-bottom: 14px;
+    }
+  }
+  &__more {
+    @include breakpoint(sm) {
+      margin-top: 30px;
+    }
+    @include breakpoint(xs) {
+      margin-top: 30px;
+    }
+  }
+  &__apps {
+    & a {
+      display: inline-block;
+      height: 54px;
+      line-height: 52px;
+      border: 2px solid rgba($color: $white, $alpha: 0.2);
+      @include border-radius(4px);
+      color: $white;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 0 20px;
+      padding-right: 26px;
+
+      @include breakpoint(md) {
+        margin-bottom: 10px;
+      }
+      & i {
+        margin-right: 2px;
+      }
+      &:hover,
+      &.active {
+        color: $black;
+        border-color: $white;
+        background: $white;
+        @include box-shadow(0px 16px 24px 0px rgba(107, 25, 0, 0.3));
+      }
+    }
+  }
+  &__form {
+    &-inner {
+      margin-bottom: 13px;
+      & input {
+        width: 325px;
+        height: 56px;
+        line-height: 56px;
+        font-size: 15px;
+        padding: 0 22px;
+        padding-top: 2px;
+        font-size: 15px;
+        outline: none;
+        background: $white;
+        border: 2px solid $white;
+        @include border-radius(4px);
+        margin-right: 20px;
+
+        @include breakpoint(sm) {
+          margin-bottom: 20px;
+          width: 100%;
+        }
+        @include breakpoint(md) {
+          margin-bottom: 20px;
+          width: 100%;
+        }
+        @include breakpoint(lg) {
+          margin-bottom: 20px;
+        }
+        @include breakpoint(xl) {
+          width: 290px;
+        }
+        @include breakpoint(xs) {
+          margin-bottom: 20px;
+          width: 100%;
+        }
+
+        &::placeholder {
+          color: $e-text-3;
+        }
+        &:focus {
+          border-color: $e-blue;
+        }
+      }
+      & button {
+        height: 56px;
+        line-height: 56px;
+
+        @include breakpoint(sm) {
+          width: 100%;
+        }
+        @include breakpoint(md) {
+          width: 100%;
+        }
+        @include breakpoint(xs) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__agree {
+    padding-left: 5px;
+    & input {
+      margin: 0;
+      appearance: none;
+      -moz-appearance: none;
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: $white;
+      border: 1px solid #b9bac1;
+      outline: none;
+      @include border-radius(4px);
+      &:checked {
+        position: relative;
+        background-color: $e-blue;
+        border-color: transparent;
+        &::after {
+          box-sizing: border-box;
+          content: "\f00c";
+          position: absolute;
+          font-family: $fontawesome;
+          font-size: 10px;
+          color: $white;
+          top: 46%;
+          left: 50%;
+          @include transform(translate(-50%, -50%));
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    & label {
+      padding-left: 8px;
+      color: $e-text-4;
+      & a {
+        color: $black;
+        font-weight: 600;
+        &:hover {
+          color: $e-blue;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/*----------------------------------------*/
+/*  10. PRODUCT CSS START
+/*----------------------------------------*/
+.product {
+  &__sm {
+    padding: 20px;
+    & ul {
+      & li {
+        display: flex;
+        margin-bottom: 20px;
+      }
+    }
+    &-thumb {
+      & img {
+        width: 85px;
+        height: 100px;
+      }
+    }
+    &-content {
+      & h5 {
+        font-size: 14px;
+        margin-bottom: 0px;
+        font-weight: 500;
+        & a {
+          &:hover {
+            color: $e-blue;
+          }
+        }
+      }
+    }
+    &-price {
+      color: $e-blue;
+      font-weight: 500;
+      &-wrapper {
+        & span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.cartmini {
+  &__area {
+    position: relative;
+  }
+  &__wrapper {
+    position: fixed;
+    right: -360px;
+    top: 0;
+    width: 340px;
+    height: 100%;
+    background: $white;
+    -webkit-transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -ms-transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    @include box-shadow(-5px 0 20px -5px rgba(0, 0, 0, 0.5));
+    z-index: 9999;
+    overflow: hidden;
+    &.opened {
+      right: 0px;
+    }
+  }
+  &__title {
+    padding: 20px 20px;
+    border-bottom: 1px solid $border;
+    box-shadow: 0 0 10px 0 rgba(129, 129, 129, 0.2);
+    & h4 {
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    &-btn {
+      background: transparent;
+      color: $black;
+      font-size: 22px;
+      &:hover {
+        @include transform(rotate(90deg));
+      }
+    }
+  }
+  &__widget {
+    overflow-y: scroll;
+    height: 100%;
+  }
+  &__inner {
+    & ul {
+      & li {
+        position: relative;
+        display: flex;
+        padding: 20px;
+        padding-right: 35px;
+        border-bottom: 1px solid rgba(129, 129, 129, 0.2);
+        transition: background-color 0.3s;
+        &:hover {
+          background: #f9f9f9;
+        }
+      }
+    }
+  }
+  &__thumb {
+    margin-right: 15px;
+    & img {
+      width: 70px;
+      height: 90px;
+    }
+  }
+  &__content {
+    & h5 {
+      font-size: 13px;
+      margin-bottom: 12px;
+      font-weight: 500;
+      & a {
+        &:hover {
+          color: $e-blue;
+        }
+      }
+    }
+  }
+  &__del {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: $black;
+    font-size: 12px;
+    background: transparent;
+    @include border-radius(50%);
+    &:hover {
+      background: $white;
+    }
+  }
+  &__checkout {
+    padding: 20px;
+    padding-bottom: 85px;
+    width: 100%;
+    background: $white;
+    border-top: 2px solid $border;
+    &-title {
+      & h4 {
+        font-size: 18px;
+        display: inline-block;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+      & span {
+        float: right;
+        font-size: 20px;
+        color: $black;
+        font-weight: 600;
+        color: $e-blue;
+      }
+    }
+  }
+}
+
+.cart-plus,
+.cart-minus {
+  width: 25px;
+  height: 30px;
+  border: 2px solid $border;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 14px;
+  &:hover {
+    cursor: pointer;
+    color: $white;
+    background: $e-blue;
+    border-color: $e-blue;
+  }
+}
+
+.cart-input {
+  height: 30px;
+  width: 32px;
+  text-align: center;
+  font-size: 14px;
+  border: none;
+  border-top: 2px solid $border;
+  border-bottom: 2px solid $border;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 -3px;
+  padding-bottom: 0px;
+  &:focus {
+    outline: none;
+  }
+}
+
+/* 16. Cart */
+
+.cart-area {
+  .table-content table {
+    background: #ffffff;
+    border-color: #eaedff;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .table-content .product-quantity {
+    float: none;
+  }
+  .table-content table td.product-name {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+
+  .table > :not(:last-child) > :last-child > * {
+    border-bottom-color: #eaedff;
+  }
+
+  .table-content table td.product-name a:hover {
+    color: $black;
+  }
+
+  .table-content table td {
+    border-top: medium none;
+    padding: 20px 10px;
+    vertical-align: middle;
+    font-size: 16px;
+  }
+
+  .table-content table th,
+  .table-content table td {
+    border-bottom: 1px solid #eaedff;
+    border-right: 1px solid #eaedff;
+  }
+
+  .table td,
+  .table th {
+    border-top: 1px solid #eaedff;
+  }
+
+  .table-content table td.product-subtotal {
+    font-size: 16px;
+  }
+
+  .table-content table td .cart-plus-minus {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .coupon-all {
+    margin-top: 50px;
+  }
+
+  .coupon {
+    float: left;
+  }
+
+  @include breakpoint(max-md) {
+    .coupon {
+      float: none;
+    }
+  }
+  #coupon_code {
+    height: 50px;
+    border: 2px solid #eaedff;
+    padding: 0 15px;
+    margin-right: 10px;
+    outline: none;
+    @include box-shadow(none);
+    &:focus {
+      border-color: $black;
+    }
+  }
+
+  @include breakpoint(max-md) {
+    #coupon_code {
+      margin-bottom: 15px;
+    }
+  }
+
+  .coupon2 {
+    float: right;
+  }
+
+  @include breakpoint(max-md) {
+    .coupon2 {
+      float: none;
+      margin-top: 15px;
+    }
+  }
+
+  .cart-page-total {
+    padding-top: 50px;
+  }
+
+  .cart-page-total > h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+  }
+
+  .cart-page-total > ul {
+    border: 1px solid #eaedff;
+  }
+
+  .cart-page-total > ul > li {
+    list-style: none;
+    font-size: 15px;
+    color: #6f7172;
+    padding: 10px 30px;
+    border-bottom: 1px solid #eaedff;
+    font-weight: 400;
+  }
+
+  .cart-page-total ul > li > span {
+    float: right;
+  }
+
+  .cart-page-total li:last-child {
+    border-bottom: 0;
+  }
+  td.product-thumbnail img {
+    width: 125px;
+  }
+
+  & .product-quantity-form {
+    margin: auto;
+    width: 122px;
+    height: 58px;
+    border: 2px solid #dadada;
+    text-align: center;
+    position: relative;
+    @include transition(0.3s);
+    &:hover {
+      border-color: $black;
+    }
+  }
+
+  & .cart-plus,
+  & .cart-minus {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    @include transform(translateY(-50%));
+    width: 45px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    outline: none;
+    &:hover {
+      cursor: pointer;
+      color: $black;
+      background: transparent;
+    }
+  }
+
+  & .cart-plus {
+    left: auto;
+    right: 0;
+  }
+
+  & .cart-input {
+    height: 58px;
+    width: 32px;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 -3px;
+    padding-bottom: 4px;
+    background: transparent;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+/* 17. Checkout */
+.coupon-accordion h3 {
+  background-color: #f6f6f6;
+  border-top: 3px solid $black;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 0 25px;
+  padding: 1em 2em 1em 3.5em;
+  position: relative;
+  width: auto;
+}
+
+.coupon-accordion h3::before {
+  content: "\f07b";
+  left: 15px;
+  top: 13px;
+  position: absolute;
+  color: #6f7172;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 700;
+}
+
+.coupon-accordion span {
+  color: #6f7172;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.coupon-accordion span:hover,
+p.lost-password a:hover {
+  color: $black;
+}
+
+.coupon-content {
+  border: 1px solid #eaedff;
+  display: none;
+  margin-bottom: 20px;
+  padding: 30px;
+}
+
+.coupon-info p.coupon-text {
+  margin-bottom: 15px;
+}
+
+.coupon-info p {
+  margin-bottom: 0;
+}
+
+.coupon-info p.form-row-first label,
+.coupon-info p.form-row-last label {
+  display: block;
+  color: #6f7172;
+}
+
+.coupon-info p.form-row-first label span.required,
+.coupon-info p.form-row-last label span.required {
+  color: red;
+  font-weight: 700;
+}
+
+.coupon-info p.form-row-first input,
+.coupon-info p.form-row-last input {
+  border: 1px solid #eaedff;
+  height: 45px;
+  margin: 0 0 14px;
+  max-width: 100%;
+  padding: 0 0 0 10px;
+  width: 100%;
+  outline: none;
+  @include box-shadow(none);
+  &:focus {
+    border-color: $black;
+  }
+}
+
+.coupon-info p.form-row input[type="submit"]:hover,
+p.checkout-coupon input[type="submit"]:hover {
+  background: #3e976c none repeat scroll 0 0;
+}
+
+.coupon-info p.form-row input[type="checkbox"] {
+  position: relative;
+  top: 2px;
+}
+
+.form-row > label {
+  margin-top: 15px;
+  margin-left: 15px;
+  color: #6f7172;
+}
+
+.buttons-cart input,
+.coupon input[type="submit"],
+.buttons-cart a,
+.coupon-info p.form-row input[type="submit"] {
+  background: #252525 none repeat scroll 0 0;
+  border: medium none;
+  color: #fff;
+  display: inline-block;
+  float: left;
+  font-size: 12px;
+  font-weight: 700;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 15px;
+  padding: 0 15px;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
+
+p.lost-password {
+  margin-top: 15px;
+}
+
+p.lost-password a {
+  color: #6f6f6f;
+}
+
+p.checkout-coupon input[type="text"] {
+  height: 45px;
+  padding: 0 15px;
+  width: 100%;
+  border: 1px solid #eaedff;
+  margin-bottom: 15px;
+  outline: none;
+  @include box-shadow(none);
+  &:focus {
+    border-color: $black;
+  }
+}
+
+.coupon-checkout-content {
+  display: none;
+}
+
+.checkbox-form h3 {
+  border-bottom: 1px solid #eaedff;
+  font-size: 26px;
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.country-select {
+  margin-bottom: 30px;
+  position: relative;
+}
+.country-select select {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #eaedff;
+  padding: 0 10px;
+  height: 50px;
+}
+
+.country-select label,
+.checkout-form-list label {
+  color: #6f7172;
+  display: block;
+  margin: 0 0 5px;
+}
+
+.country-select label span.required,
+.checkout-form-list label span.required {
+  color: red;
+}
+
+.country-select .nice-select {
+  border: 1px solid #eaedff;
+  height: 45px;
+  padding-left: 10px;
+  width: 100%;
+  color: #6f7172;
+  margin-bottom: 20px;
+}
+
+.country-select .nice-select .list {
+  width: 100%;
+}
+
+.country-select .nice-select::after {
+  border-top: 4px solid #6f7172;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.checkout-form-list {
+  margin-bottom: 30px;
+}
+
+.checkout-form-list label {
+  color: #6f7172;
+}
+
+.checkout-form-list input[type="text"],
+.checkout-form-list input[type="password"],
+.checkout-form-list input[type="email"] {
+  background: #ffffff;
+  border: 1px solid #eaedff;
+  border-radius: 0;
+  height: 45px;
+  padding: 0 0 0 10px;
+  width: 100%;
+  outline: none;
+  @include box-shadow(none);
+  &:focus {
+    border-color: $black;
+  }
+}
+
+.checkout-form-list input[type="text"]::-moz-placeholder,
+.checkout-form-list input[type="password"]::-moz-placeholder,
+.checkout-form-list input[type="email"]::-moz-placeholder {
+  color: #6f7172;
+  opacity: 1;
+}
+
+.checkout-form-list input[type="text"]::placeholder,
+.checkout-form-list input[type="password"]::placeholder,
+.checkout-form-list input[type="email"]::placeholder {
+  color: #6f7172;
+  opacity: 1;
+}
+
+.checkout-form-list input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  top: 1px;
+}
+
+.create-acc label {
+  color: #6f7172;
+  display: inline-block;
+}
+
+.create-account {
+  display: none;
+}
+
+.ship-different-title h3 label {
+  display: inline-block;
+  margin-right: 20px;
+  color: #6f7172;
+}
+
+.order-notes textarea {
+  border: 1px solid #eaedff;
+  height: 90px;
+  padding: 15px;
+  width: 100%;
+}
+
+.order-notes textarea::-moz-placeholder {
+  color: #6f7172;
+  opacity: 1;
+}
+
+.order-notes textarea::placeholder {
+  color: #6f7172;
+  opacity: 1;
+}
+
+#ship-box-info {
+  display: none;
+}
+
+.panel-group .panel {
+  border-radius: 0;
+}
+
+.panel-default > .panel-heading {
+  border-radius: 0;
+}
+
+.your-order {
+  padding: 30px 40px 45px;
+  border: 3px solid #eaedff;
+}
+
+@include breakpoint(max-md) {
+  .your-order {
+    padding: 15px;
+  }
+}
+
+.your-order h3 {
+  border-bottom: 1px solid #eaedff;
+  font-size: 30px;
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.your-order-table table {
+  background: none;
+  border: 0;
+  width: 100%;
+}
+
+.your-order-table table th,
+.your-order-table table td {
+  border-bottom: 1px solid #eaedff;
+  border-right: medium none;
+  color: #6f7172;
+  font-size: 14px;
+  padding: 15px 0;
+  text-align: left;
+}
+
+@include breakpoint(max-md) {
+  .your-order-table table th,
+  .your-order-table table td {
+    padding-right: 10px;
+  }
+}
+
+.your-order-table table th {
+  border-top: medium none;
+  color: #6f7172;
+  font-weight: normal;
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 250px;
+}
+
+.panel-body > p {
+  color: #222;
+}
+
+.your-order-table table .shipping ul li input {
+  position: relative;
+  top: 2px;
+}
+
+.your-order-table table .shipping ul li label {
+  color: #6f7172;
+}
+
+.your-order-table table .shipping th {
+  vertical-align: top;
+}
+
+.your-order-table table .order-total th {
+  border-bottom: 0;
+  font-size: 14px;
+}
+
+.your-order-table table .order-total td {
+  border-bottom: medium none;
+}
+
+.your-order-table table tr.cart_item:hover {
+  background: #f9f9f9;
+}
+
+.your-order-table table tr.order-total td span {
+  color: $black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.payment-method {
+  margin-top: 40px;
+
+  & .accordion-item:last-of-type {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  & .accordion-item {
+    background-color: #fff;
+    border: 0;
+    border-bottom: 1px solid $border-2;
+  }
+  & .accordion-button {
+    font-size: 16px;
+    font-weight: 500;
+    color: $black;
+    padding: 23px 0;
+    border: none;
+    &:focus {
+      @include box-shadow(none);
+    }
+    &::after {
+      position: absolute;
+      content: "\f067";
+      right: 0;
+      top: 50%;
+      @include transform(translateY(-50%));
+      font-family: $fontawesome;
+      font-size: 16px;
+      font-weight: 400;
+      margin-left: 0;
+      background-image: none;
+    }
+  }
+  & .accordion-button:not(.collapsed) {
+    color: $black;
+    background-color: $white;
+    box-shadow: none;
+    &::after {
+      content: "\f068";
+    }
+  }
+  & .accordion-body {
+    padding: 8px 0;
+    padding-bottom: 40px;
+  }
+  & .accordion-collapse {
+    border: none;
+  }
+}
+
+.panel-title > a {
+  display: block;
+}
+
+.order-button-payment input {
+  background: #232323 none repeat scroll 0 0;
+  border: medium none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  height: 40px;
+  margin: 0px 0 0;
+  padding: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}
+
+.order-button-payment input:hover {
+  background: #3e976c none repeat scroll 0 0;
+}
+
+.payment-method .btn-link {
+  -moz-user-select: none;
+  background: no-repeat;
+  border: medium none;
+  border-radius: 0;
+  color: #444;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-bottom: 0;
+  padding: 3px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.payment-method .card {
+  background-color: #ffffff;
+  border: 1px solid #eaedff;
+  border-radius: 0;
+  margin-bottom: 10px;
+}
+
+.payment-method .accordion .card:first-of-type {
+  border: 1px solid #eaedff;
+}
+
+.card-header:first-child {
+  border-radius: 0;
+}
+
+.payment-method .card-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaedff;
+}
+
+.order-button-payment button {
+  width: 100%;
+}
